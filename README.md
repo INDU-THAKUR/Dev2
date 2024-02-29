@@ -9,6 +9,11 @@
            sudo apt install git
            sudo apt update
            sudo clone url_your_porject_repo
+
+## Create Non Root Users
+        adduser indu
+        usermod -aG sudo harry
+        sudo su
            
 # INSTALL DEPENDENCY
  Now switch to your project file location by using cd command follow with file loctaion.
