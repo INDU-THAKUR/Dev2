@@ -10,7 +10,7 @@
            sudo apt update
            sudo clone url_your_porject_repo
            
-# Install dependency 
+# INSTALL DEPENDENCY
  Now switch to your project file location by using cd command follow with file loctaion.
  and here install dependency (install node and npm)
    
@@ -25,16 +25,24 @@ This will install the nvm script to your user account. To use it, you must first
       source ~/.bashrc
       
 Now, you can ask NVM which versions of Node are available:
-      nvm list-remote
+
+       nvm list-remote
 You can install a version of Node by writing:
-      nvm install v18.10.0
+
+       nvm install v18.10.0
 You can switch between installed versions with nvm use:
-      nvm use v18.10.0
+
+       nvm use v18.10.0
 If you want to remove node.js
-     sudo apt remove nodejs
-NPM install:-
-     sudo apt install npm
-     npm install
+
+       sudo apt remove nodejs
+npm install:-
+
+       sudo apt install npm
+       npm install
+Check version:-
+
+       node -version && npm -version
 
 # NGINX SERVER
 ## Prerequisites
