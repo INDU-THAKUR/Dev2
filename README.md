@@ -5,9 +5,11 @@
   After that install git on your virtual machine if already not install.
   And then clone your project repository from you github to your virtual machine.
   by using these commands:
+  
            sudo apt install git
            sudo apt update
            sudo clone url_your_porject_repo
+           
 # Install dependency 
  Now switch to your project file location by using cd command follow with file loctaion.
  and here install dependency (install node and npm)
@@ -19,7 +21,9 @@
      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
   
 This will install the nvm script to your user account. To use it, you must first source your .bashrc file:
+
       source ~/.bashrc
+      
 Now, you can ask NVM which versions of Node are available:
       nvm list-remote
 You can install a version of Node by writing:
@@ -35,10 +39,43 @@ NPM install:-
 # NGINX SERVER
 ## Prerequisites
 You should have a regular, non-root user with sudo privileges.
-sudo apt update
-sudo apt install nginx
+      sudo apt update
+      sudo apt install nginx
 
 ## Adjusting the Firewall
-   sudo ufw app list
-   sudo ufw allow 'Nginx HTTP'
-   sudo ufw status
+      sudo ufw app list
+      sudo ufw allow 'Nginx HTTP'
+      sudo ufw status
+   
+## Managing Services of nginx.
+  Stop:-
+  
+      sudo systemctl stop nginx
+  
+  Start:-
+  
+     sudo systemctl start nginx
+  
+  Restrat:-
+  
+     sudo systemctl restart nginx
+  
+  Reload:-
+  
+     sudo systemctl reload nginx
+  
+  Disable:-
+  
+     sudo systemctl disable nginx
+  
+  Enabled:-
+  
+     sudo systemctl enable nginx
+  
+  Test:-
+  
+     sudo nginx -t
+    
+
+
+   
