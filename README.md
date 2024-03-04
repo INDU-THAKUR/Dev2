@@ -88,7 +88,50 @@ You should have a regular, non-root user with sudo privileges.
   Test:-
   
      sudo nginx -t
-    
+
+  ## Nginx server configration 
+  Go to /etc/nginx/sites-enabled/ path here edit default file.
+  To edit default file open it with sudo privilages.
+  
+                sudo nano default
+
+  In defaut file, server block change the root path with path of project file path which is (/var/www/html/abc).
 
 
+
+# SSL Certification
+   ### How to Enable HTTPS in Your Domain Hosted on Linux Remote Server or VPS
    
+    Install Certbot and it’s Nginx plugin
+  
+      sudo apt install certbot python3-certbot-nginx  
+   
+    Verify Web Server Ports are Open and Allowed through Firewall
+      
+       sudo ufw status verbose
+
+    Obtain an SSL certificate
+
+       sudo certbot --nginx -d your_domain.com -d www.your_domain.com
+
+    Check Status of Certbot
+
+       sudo systemctl status certbot.timer
+
+    Dry Run SSL 
+
+        sudo certbot renew --dry-run
+## To remove SSL certificate.
+
+Get the certificate's name that will delete.
+  
+    sudo certbot certificates
+
+Delete only one certificate by the name.
+
+    sudo certbot delete --cert-name server.domain.tld
+
+    
+        
+        
+        
